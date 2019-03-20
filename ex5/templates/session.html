@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}Principal{% endblock %}
+
+
+{% block body %}
+
+{% if name %}
+    <h1>Hola {{name}}, ya te has registrado previamente</h1>
+    <br><br>
+    <a href="/clean">Salir</a><br>
+    <a href="/">Inicio</a>
+{% else %}
+    <form method="POST">
+        <fieldset>
+            <label for="nameInput">Nombre</label>
+            <input type="text" name="name" id="nameInput">
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="Ingresar">
+        </fieldset>
+    </form>
+
+    <br><br>
+    <a href="/">Inicio</a>
+{% endif %}
+
+{% endblock %}
