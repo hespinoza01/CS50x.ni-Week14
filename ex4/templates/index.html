@@ -1,0 +1,34 @@
+{%extends "layout.html"%}
+{%block title %}
+Frosh IMs
+{%endblock %}
+
+{%block body%}
+<div style="text-align: center" style="margin:10px  ">
+
+<h1>Register for Frosh IMs</h1>
+<form action="{{ url_for('register') }} " method="post">
+   Name:<input type="text" name="name"/>
+    <br>
+ <input name="captain" type="checkbox"/>Captain?
+    <br/>
+    <input name="comfort" type="radio" value="less"/> Less confortable
+    <input name="comfortable" type="radio" value="more"/> More confortable
+    <br>
+
+
+
+    Dorm:
+    <select name="dorm">
+        <option value=""></option>
+        <option value="UCA">UCA</option>
+        <option value="UNAN MANAGUA">UNAN MANAGUA</option>
+        <option value="UNI">UNI</option>
+
+    </select>
+    <br>
+
+    <input type="submit" value"register"/>
+</form>
+</div>
+{%endblock%}
