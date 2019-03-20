@@ -1,0 +1,13 @@
+<h1>Uso de sentencias if/else</h1>
+
+{% if age == 0 %}
+    <p>Sin edad, por favor ingrese el parámetro de la edad.</p>
+{% else %}
+    {% if not number %}
+        <p style="color:red">El valor evaluado no es un número entero.</p>
+    {% elif age >= 18 %}
+        <p>Mayor de edad</p>
+    {% else %}
+        <p>Menor de edad</p>
+    {% endif %}
+{% endif %}

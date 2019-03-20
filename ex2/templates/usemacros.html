@@ -1,0 +1,8 @@
+{% import 'macros.html' as macros %}
+
+<h1>Comentarios</h1>
+<br><br>
+
+{% for comment in comments %}
+    {{macros.render_comment(comment)}}
+{% endfor %}
