@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block title %}Principal{% endblock %}
+
+
+{% block head %}
+<style>
+    body{
+      background-color: tomato;
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+
+    fieldset{
+        border: none;
+    }
+
+    label, input{
+      display: block;
+      margin-bottom: .75rem;
+    }
+
+    input[type="text"], input[type="submit"]{
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      border: none;
+    }
+
+    input[type="text"]{
+      padding: .5rem;
+    }
+
+    input[type="submit"]{
+      padding: .25rem 1rem;
+    }
+</style>
+{% endblock %}
+
+
+{% block body %}
+
+    {% if content %}
+        {{content}}
+    {% else %}
+        <form action="" method="POST">
+            <label for="nameInput">Nombre</label>
+            <input type="text" name="name" id="nameInput">
+            <input type="submit" value="Enviar">
+        </form>
+    {% endif %}
+
+{% endblock %}
