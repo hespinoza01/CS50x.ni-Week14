@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+    <h1>Uploads file list</h1>
+
+    <ul>
+        {% for file in files %}
+            <li><a href="/uploads/{{file}}">{{file}}</a></li>
+        {% endfor %}
+    </ul>
+
+    <br><br>
+    <a href="/">Home</a>
+
+{% endblock %}
